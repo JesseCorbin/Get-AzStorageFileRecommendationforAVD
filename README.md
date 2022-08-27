@@ -1,9 +1,9 @@
 # Get-AzStorageFileRecommendationforAVD.ps1
 
 ## .SYNOPSIS
-Gives loose recommendation for how much a Premium Azure File Share storage quota (which correlates with IOPS) to get for your AVD/FSLogix environment by inputting user session information.
-    This script was created based on a need for a clear way to determine File storage quota need based on number of user sessions, the most practical input.
-    We want to make sure we give (Capacity and IOPS) head room to guarantee a good customer experience. This tool was created to assist with that.
+Gives loose recommendation for how much Premium Azure File Share storage quota (which correlates with IOPS) to provision for your AVD/FSLogix environment by inputting user session information.
+This script was created based on a need for a clear way to determine File storage quota need based on number of user sessions, the most practical input.
+We want to make sure we give (Capacity and IOPS) head room to guarantee a good customer experience. This tool was created to assist with that.
 ## .DESCRIPTION
 Script takes input of number of users in your environment, number of estimated concurrent users, estimated number of unique users, and estimated average profile size (VHD/VHDX size) in GiB. 
 It takes the inputs you give and calculates recommendations based on Microsoft's scalability and performace targets for how IOPS (Burst and Stable) scales as you provision more storage: https://docs.microsoft.com/en-us/azure/storage/files/storage-files-scale-targets.
